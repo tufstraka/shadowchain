@@ -55,7 +55,7 @@ graph LR
 ### **Web3 Identity is Reaching Critical Mass**
 
 ```mermaid
-pie title "Web3 Identity Adoption 2024"
+pie title "Web3 Identity Adoption 2025"
     "ENS Names" : 2000000
     "Lens Profiles" : 500000
     "World ID Users" : 1000000
@@ -328,78 +328,42 @@ graph TB
 
 ## 📊 **Traction & Validation**
 
-### **Current Metrics (November 2024)**
+### **Current Metrics (November 2025)**
 
 | Metric | Status | Growth Rate |
 |--------|--------|-------------|
-| **Parachain Status** | ✅ Live on Rococo | Ready for Kusama |
-| **Items Mirrored** | 1,000+ | +100/day |
-| **Active Beta Users** | 50+ | +5/week |
+| **Parachain Status** | ✅ Ready for Paseo |
+| **Items Mirrored** | 99 | ?/day |
+| **Active Beta Users** | 4 | ?/week |
 | **Encryption Performance** | <100ms | Optimized |
 | **System Uptime** | 100% (30 days) | Production-ready |
-| **Community** | 500+ Discord members | +50/week |
 
-### **User Testimonials**
-
-> **"This is the missing piece for Web3 identity"**  
-> *Finally, I can prove my 10 years of open source contributions on-chain*
-> — Lead Developer, DeFi Protocol
-
-> **"Game-changer for creator ownership"**  
-> *My tweets are now my assets, not Twitter's*
-> — Web3 Content Creator
-
-> **"The reputation layer we've been waiting for"**  
-> *We're integrating Shadowchain for DAO membership verification*
-> — DAO Governance Lead
 
 ---
 
 ## 🗺️ **Roadmap: From Innovation to Infrastructure**
 
-### **2024-2025 Execution Timeline**
+### **2025-2026 Execution Timeline**
 
 ```mermaid
 timeline
     title Shadowchain Growth Journey
     
-    Q4 2024 : Foundation
-            : Rococo Parachain ✅
+    Q4 2025 : Foundation
             : Beta Launch ✅
             : Core Features ✅
             
-    Q1 2025 : Expansion
-            : Kusama Parachain
-            : KILT Integration
-            : Mobile Apps
-            : 1K Active Users
+    Q1 2025 : KILT Integration
             
-    Q2 2025 : Integration
-            : Polkadot Mainnet
-            : Token Launch
+    Q2 2025 : Token Launch
             : DeFi Partnerships
-            : 10K Active Users
             
     Q3 2025 : Scale
             : Data Marketplace
             : Enterprise API
             : AI Training Sets
-            : 100K Active Users
             
-    Q4 2025 : Dominance
-            : Industry Standard
-            : 1M+ Users
-            : $100M TVL
-            : Global Adoption
 ```
-
-### **Key Milestones & Deliverables**
-
-- **Q1 2025**: Web3 Foundation Grant ($50K), Kusama slot auction
-- **Q2 2025**: First DeFi integration (Moonbeam), $SHDW token launch
-- **Q3 2025**: Launch reputation marketplace, enterprise partnerships
-- **Q4 2025**: Become the Schelling point for Web3 reputation
-
 ---
 
 ## 🏆 **Why Shadowchain Wins**
