@@ -107,7 +107,7 @@ Shadowchain provides a user-sovereign data layer that:
 ## Architecture
 
 ```mermaid
-%%{init: {'theme':'base', 'themeVariables': { 'primaryColor':'#E6007A','primaryTextColor':'#fff','primaryBorderColor':'#232323','lineColor':'#65C2CB','secondaryColor':'#232323','tertiaryColor':'#fff'}}}%%
+%%{init: {'theme':'base', 'themeVariables': { 'primaryColor':'#2563eb','primaryTextColor':'#fff','primaryBorderColor':'#1e40af','lineColor':'#64748b','secondaryColor':'#0ea5e9','tertiaryColor':'#f8fafc','fontSize':'14px'}}}%%
 graph TB
     subgraph sources["Web2 Data Sources"]
         direction LR
@@ -169,15 +169,17 @@ graph TB
     identity --> creds
     creds --> wallet
     
-    classDef planned fill:#f0f0f0,stroke:#999,stroke-dasharray: 5 5
-    classDef primary fill:#E6007A,stroke:#232323,color:#fff
-    classDef secondary fill:#65C2CB,stroke:#232323,color:#000
-    classDef tertiary fill:#232323,stroke:#E6007A,color:#fff
+    classDef planned fill:#e2e8f0,stroke:#94a3b8,stroke-dasharray: 5 5,color:#475569
+    classDef primary fill:#2563eb,stroke:#1e40af,color:#fff,stroke-width:2px
+    classDef secondary fill:#0ea5e9,stroke:#0284c7,color:#fff,stroke-width:2px
+    classDef tertiary fill:#64748b,stroke:#475569,color:#fff,stroke-width:2px
+    classDef neutral fill:#f1f5f9,stroke:#cbd5e1,color:#1e293b,stroke-width:2px
     
     class li,rd planned
     class shadow,identity,gov primary
     class ipfs,xcm secondary
     class relay,kilt tertiary
+    class sources,bridge,user neutral
 ```
 
 ### Technical Stack
@@ -200,7 +202,7 @@ graph TB
 ### Data Flow
 
 ```mermaid
-%%{init: {'theme':'base', 'themeVariables': { 'primaryColor':'#E6007A','primaryTextColor':'#fff','primaryBorderColor':'#232323','lineColor':'#65C2CB','secondaryColor':'#232323','tertiaryColor':'#fff'}}}%%
+%%{init: {'theme':'base', 'themeVariables': { 'primaryColor':'#2563eb','primaryTextColor':'#fff','secondaryColor':'#0ea5e9','tertiaryColor':'#64748b','noteBkgColor':'#f1f5f9','noteTextColor':'#1e293b','noteBorderColor':'#cbd5e1','actorBkg':'#f8fafc','actorBorder':'#64748b','actorTextColor':'#1e293b','signalColor':'#475569','signalTextColor':'#1e293b','labelBoxBkgColor':'#f1f5f9','labelTextColor':'#1e293b','loopTextColor':'#1e293b','activationBkgColor':'#dbeafe','activationBorderColor':'#2563eb','sequenceNumberColor':'#fff'}}}%%
 sequenceDiagram
     actor User
     participant Wallet as Polkadot Wallet
@@ -318,7 +320,7 @@ make dev
 ## Roadmap
 
 ```mermaid
-%%{init: {'theme':'base', 'themeVariables': { 'primaryColor':'#E6007A','primaryTextColor':'#fff','primaryBorderColor':'#232323','lineColor':'#65C2CB'}}}%%
+%%{init: {'theme':'base', 'themeVariables': { 'primaryColor':'#2563eb','primaryTextColor':'#fff','primaryBorderColor':'#1e40af','crit0':'#dc2626','crit1':'#b91c1c','crit2':'#991b1b','done0':'#16a34a','done1':'#15803d','done2':'#166534','active0':'#0ea5e9','active1':'#0284c7','active2':'#0369a1','grid':'#e2e8f0','textColor':'#1e293b','fontSize':'13px'}}}%%
 gantt
     title Shadowchain Development Roadmap
     dateFormat YYYY-MM
@@ -413,7 +415,7 @@ gantt
 - Authenticated developer portfolios for hiring
 
 ```mermaid
-%%{init: {'theme':'base', 'themeVariables': { 'primaryColor':'#E6007A','primaryTextColor':'#fff','primaryBorderColor':'#232323','lineColor':'#65C2CB'}}}%%
+%%{init: {'theme':'base', 'themeVariables': { 'primaryColor':'#2563eb','primaryTextColor':'#fff','primaryBorderColor':'#1e40af','lineColor':'#64748b','secondaryColor':'#0ea5e9','tertiaryColor':'#64748b','fontSize':'14px'}}}%%
 graph LR
     subgraph web2["Web2 Activity"]
         commits[GitHub Commits]
@@ -448,9 +450,9 @@ graph LR
     score --> jobs
     score --> grants
     
-    classDef web2Style fill:#f0f0f0,stroke:#999
-    classDef shadowStyle fill:#E6007A,stroke:#232323,color:#fff
-    classDef web3Style fill:#65C2CB,stroke:#232323,color:#000
+    classDef web2Style fill:#f1f5f9,stroke:#94a3b8,color:#1e293b,stroke-width:2px
+    classDef shadowStyle fill:#2563eb,stroke:#1e40af,color:#fff,stroke-width:2px
+    classDef web3Style fill:#0ea5e9,stroke:#0284c7,color:#fff,stroke-width:2px
     
     class commits,prs,issues,stars web2Style
     class mirror,verify,score shadowStyle
