@@ -106,30 +106,78 @@ Shadowchain provides a user-sovereign data layer that:
 
 ## Architecture
 
-```
-┌─────────────────────────────────────────────────────────────┐
-│                    Web2 Data Sources                        │
-│         GitHub API  │  Twitter/X  │  LinkedIn (Planned)      │
-└──────────────────┬──────────────────────────────────────────┘
-                   │
-┌──────────────────▼──────────────────────────────────────────┐
-│                 Bridge Layer                                │
-│  OAuth Service │ Data Fetcher │ Local Encryption            │
-└──────────────────┬──────────────────────────────────────────┘
-                   │
-        ┌──────────┴──────────┐
-        │                     │
-┌───────▼─────────┐  ┌────────▼────────┐
-│  IPFS Storage   │  │  Shadowchain    │
-│  (Encrypted)    │  │  Parachain      │
-└─────────────────┘  └────────┬────────┘
-                              │
-                     ┌────────┴────────┐
-                     │                 │
-              ┌──────▼──────┐   ┌─────▼─────┐
-              │ KILT DIDs   │   │ XCM v3    │
-              │ (Planned)   │   │ Bridge    │
-              └─────────────┘   └───────────┘
+```mermaid
+%%{init: {'theme':'base', 'themeVariables': { 'primaryColor':'#E6007A','primaryTextColor':'#fff','primaryBorderColor':'#232323','lineColor':'#65C2CB','secondaryColor':'#232323','tertiaryColor':'#fff'}}}%%
+graph TB
+    subgraph sources["Web2 Data Sources"]
+        direction LR
+        gh[GitHub API]
+        tw[Twitter/X API]
+        li[LinkedIn<br/>Planned]
+        rd[Reddit<br/>Planned]
+    end
+    
+    subgraph bridge["Bridge Layer"]
+        direction LR
+        oauth[OAuth Service]
+        fetch[Data Fetcher]
+        encrypt[Local Encryption<br/>XSalsa20-Poly1305]
+    end
+    
+    subgraph storage["Decentralized Storage"]
+        ipfs[(IPFS<br/>Encrypted Blobs)]
+    end
+    
+    subgraph chain["Shadowchain Parachain"]
+        shadow[Shadow Pallet<br/>Data Anchoring]
+        identity[Identity Pallet<br/>DID Management]
+        gov[Governance<br/>Community Control]
+    end
+    
+    subgraph polkadot["Polkadot Ecosystem"]
+        relay[Relay Chain<br/>Shared Security]
+        kilt[KILT Protocol<br/>Verifiable Credentials]
+        xcm[XCM v3<br/>Cross-chain Queries]
+    end
+    
+    subgraph user["User Layer"]
+        wallet[Polkadot.js Wallet]
+        keys[Encryption Keys]
+        creds[Verifiable Credentials]
+    end
+    
+    gh --> oauth
+    tw --> oauth
+    li -.-> oauth
+    rd -.-> oauth
+    
+    oauth --> fetch
+    fetch --> encrypt
+    
+    encrypt --> ipfs
+    encrypt --> shadow
+    
+    shadow --> identity
+    identity --> gov
+    
+    chain --> relay
+    chain <--> kilt
+    chain <--> xcm
+    
+    wallet --> keys
+    keys --> encrypt
+    identity --> creds
+    creds --> wallet
+    
+    classDef planned fill:#f0f0f0,stroke:#999,stroke-dasharray: 5 5
+    classDef primary fill:#E6007A,stroke:#232323,color:#fff
+    classDef secondary fill:#65C2CB,stroke:#232323,color:#000
+    classDef tertiary fill:#232323,stroke:#E6007A,color:#fff
+    
+    class li,rd planned
+    class shadow,identity,gov primary
+    class ipfs,xcm secondary
+    class relay,kilt tertiary
 ```
 
 ### Technical Stack
@@ -148,6 +196,37 @@ Shadowchain provides a user-sovereign data layer that:
 - OAuth 2.0 for platform authorization
 - Rate-limited data fetching
 - Event-driven processing pipeline
+
+### Data Flow
+
+```mermaid
+%%{init: {'theme':'base', 'themeVariables': { 'primaryColor':'#E6007A','primaryTextColor':'#fff','primaryBorderColor':'#232323','lineColor':'#65C2CB','secondaryColor':'#232323','tertiaryColor':'#fff'}}}%%
+sequenceDiagram
+    actor User
+    participant Wallet as Polkadot Wallet
+    participant Frontend as Shadowchain UI
+    participant Backend as Bridge Service
+    participant Platform as GitHub/Twitter
+    participant IPFS as IPFS Network
+    participant Chain as Shadowchain
+
+    User->>Frontend: Connect & Authorize
+    Frontend->>Wallet: Request Signature
+    Wallet-->>Frontend: Signature
+    Frontend->>Backend: OAuth Flow + Signature
+    Backend->>Platform: Fetch User Data
+    Platform-->>Backend: Raw Data
+    Backend->>Frontend: Encrypted Data
+    Frontend->>Frontend: Client-side Encryption
+    Frontend->>IPFS: Store Encrypted Blob
+    IPFS-->>Frontend: Content Hash (CID)
+    Frontend->>Chain: Anchor CID + Metadata
+    Chain-->>Frontend: Proof Receipt
+    Frontend->>User: Verification Complete
+    
+    Note over User,Chain: All encryption happens client-side
+    Note over IPFS,Chain: Only hashes stored on-chain
+```
 
 ---
 
@@ -238,6 +317,40 @@ make dev
 
 ## Roadmap
 
+```mermaid
+%%{init: {'theme':'base', 'themeVariables': { 'primaryColor':'#E6007A','primaryTextColor':'#fff','primaryBorderColor':'#232323','lineColor':'#65C2CB'}}}%%
+gantt
+    title Shadowchain Development Roadmap
+    dateFormat YYYY-MM
+    section Foundation
+    Paseo Testnet Launch           :done, 2025-07, 2025-09
+    GitHub Integration             :done, 2025-08, 2025-10
+    Twitter/X Integration          :done, 2025-09, 2025-11
+    IPFS Storage                   :active, 2025-10, 2025-12
+    Client Encryption              :active, 2025-11, 2026-01
+    Web Dashboard Beta             :2025-12, 2026-02
+    
+    section Integration
+    KILT DID Integration           :2026-02, 2026-04
+    W3C Credentials                :2026-03, 2026-05
+    XCM v3 Queries                 :2026-04, 2026-06
+    LinkedIn Integration           :2026-05, 2026-07
+    Reddit Integration             :2026-06, 2026-08
+    Discord Integration            :2026-07, 2026-09
+    
+    section Launch
+    Security Audit                 :crit, 2026-08, 2026-10
+    Parachain Auction              :milestone, 2026-10, 2026-11
+    Mainnet Deployment             :crit, 2026-11, 2026-12
+    Governance Activation          :2026-12, 2027-01
+    Mobile App Release             :2027-01, 2027-03
+    
+    section Expansion
+    AI Reputation Scoring          :2027-02, 2027-06
+    Data Marketplace               :2027-04, 2027-08
+    Enterprise API                 :2027-06, 2027-10
+```
+
 ### Phase 1: Foundation (Q3 2025 - Q1 2026)
 
 **Q3 2025**
@@ -298,6 +411,51 @@ make dev
 - DAO membership based on verified development activity
 - Undercollateralized DeFi loans using reputation
 - Authenticated developer portfolios for hiring
+
+```mermaid
+%%{init: {'theme':'base', 'themeVariables': { 'primaryColor':'#E6007A','primaryTextColor':'#fff','primaryBorderColor':'#232323','lineColor':'#65C2CB'}}}%%
+graph LR
+    subgraph web2["Web2 Activity"]
+        commits[GitHub Commits]
+        prs[Pull Requests]
+        issues[Issue Resolution]
+        stars[Project Stars]
+    end
+    
+    subgraph shadow["Shadowchain"]
+        mirror[Mirror & Encrypt]
+        verify[Blockchain Verify]
+        score[Calculate Score]
+    end
+    
+    subgraph web3["Web3 Use Cases"]
+        dao[DAO Membership<br/>Voting Weight]
+        defi[DeFi Lending<br/>Reduced Collateral]
+        jobs[Job Verification<br/>Skill Proof]
+        grants[Grant Eligibility<br/>Track Record]
+    end
+    
+    commits --> mirror
+    prs --> mirror
+    issues --> mirror
+    stars --> mirror
+    
+    mirror --> verify
+    verify --> score
+    
+    score --> dao
+    score --> defi
+    score --> jobs
+    score --> grants
+    
+    classDef web2Style fill:#f0f0f0,stroke:#999
+    classDef shadowStyle fill:#E6007A,stroke:#232323,color:#fff
+    classDef web3Style fill:#65C2CB,stroke:#232323,color:#000
+    
+    class commits,prs,issues,stars web2Style
+    class mirror,verify,score shadowStyle
+    class dao,defi,jobs,grants web3Style
+```
 
 ### Content Creator Verification
 
