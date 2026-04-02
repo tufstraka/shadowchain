@@ -107,7 +107,7 @@ Shadowchain provides a user-sovereign data layer that:
 ## Architecture
 
 ```mermaid
-%%{init: {'theme':'base', 'themeVariables': { 'primaryColor':'#2563eb','primaryTextColor':'#fff','primaryBorderColor':'#1e40af','lineColor':'#64748b','secondaryColor':'#0ea5e9','tertiaryColor':'#f8fafc','fontSize':'14px'}}}%%
+%%{init: {'theme':'dark', 'themeVariables': { 'primaryColor':'#3b82f6','primaryTextColor':'#f8fafc','primaryBorderColor':'#60a5fa','lineColor':'#94a3b8','secondaryColor':'#06b6d4','tertiaryColor':'#475569','fontSize':'14px','fontFamily':'ui-sans-serif, system-ui, sans-serif'}}}%%
 graph TB
     subgraph sources["Web2 Data Sources"]
         direction LR
@@ -169,17 +169,15 @@ graph TB
     identity --> creds
     creds --> wallet
     
-    classDef planned fill:#e2e8f0,stroke:#94a3b8,stroke-dasharray: 5 5,color:#475569
-    classDef primary fill:#2563eb,stroke:#1e40af,color:#fff,stroke-width:2px
-    classDef secondary fill:#0ea5e9,stroke:#0284c7,color:#fff,stroke-width:2px
-    classDef tertiary fill:#64748b,stroke:#475569,color:#fff,stroke-width:2px
-    classDef neutral fill:#f1f5f9,stroke:#cbd5e1,color:#1e293b,stroke-width:2px
+    classDef planned fill:#334155,stroke:#64748b,stroke-dasharray: 5 5,color:#94a3b8
+    classDef primary fill:#3b82f6,stroke:#60a5fa,color:#f8fafc,stroke-width:2px
+    classDef secondary fill:#06b6d4,stroke:#22d3ee,color:#f8fafc,stroke-width:2px
+    classDef tertiary fill:#8b5cf6,stroke:#a78bfa,color:#f8fafc,stroke-width:2px
     
     class li,rd planned
     class shadow,identity,gov primary
     class ipfs,xcm secondary
     class relay,kilt tertiary
-    class sources,bridge,user neutral
 ```
 
 ### Technical Stack
@@ -202,7 +200,7 @@ graph TB
 ### Data Flow
 
 ```mermaid
-%%{init: {'theme':'base', 'themeVariables': { 'primaryColor':'#2563eb','primaryTextColor':'#fff','secondaryColor':'#0ea5e9','tertiaryColor':'#64748b','noteBkgColor':'#f1f5f9','noteTextColor':'#1e293b','noteBorderColor':'#cbd5e1','actorBkg':'#f8fafc','actorBorder':'#64748b','actorTextColor':'#1e293b','signalColor':'#475569','signalTextColor':'#1e293b','labelBoxBkgColor':'#f1f5f9','labelTextColor':'#1e293b','loopTextColor':'#1e293b','activationBkgColor':'#dbeafe','activationBorderColor':'#2563eb','sequenceNumberColor':'#fff'}}}%%
+%%{init: {'theme':'dark', 'themeVariables': { 'actorBkg':'#1e293b','actorBorder':'#64748b','actorTextColor':'#f8fafc','noteBkgColor':'#334155','noteTextColor':'#f8fafc','noteBorderColor':'#64748b','signalColor':'#94a3b8','signalTextColor':'#f8fafc','labelBoxBkgColor':'#1e293b','labelTextColor':'#f8fafc','loopTextColor':'#f8fafc','activationBkgColor':'#3b82f6','activationBorderColor':'#60a5fa','sequenceNumberColor':'#f8fafc','fontFamily':'ui-sans-serif, system-ui, sans-serif'}}}%%
 sequenceDiagram
     actor User
     participant Wallet as Polkadot Wallet
@@ -320,7 +318,7 @@ make dev
 ## Roadmap
 
 ```mermaid
-%%{init: {'theme':'base', 'themeVariables': { 'primaryColor':'#2563eb','primaryTextColor':'#fff','primaryBorderColor':'#1e40af','crit0':'#dc2626','crit1':'#b91c1c','crit2':'#991b1b','done0':'#16a34a','done1':'#15803d','done2':'#166534','active0':'#0ea5e9','active1':'#0284c7','active2':'#0369a1','grid':'#e2e8f0','textColor':'#1e293b','fontSize':'13px'}}}%%
+%%{init: {'theme':'dark', 'themeVariables': { 'crit0':'#ef4444','crit1':'#dc2626','crit2':'#b91c1c','done0':'#22c55e','done1':'#16a34a','done2':'#15803d','active0':'#06b6d4','active1':'#0891b2','active2':'#0e7490','grid':'#334155','background':'#1e293b','mainBkg':'#1e293b','secondBkg':'#334155','textColor':'#f8fafc','fontSize':'13px','fontFamily':'ui-sans-serif, system-ui, sans-serif'}}}%%
 gantt
     title Shadowchain Development Roadmap
     dateFormat YYYY-MM
@@ -415,7 +413,7 @@ gantt
 - Authenticated developer portfolios for hiring
 
 ```mermaid
-%%{init: {'theme':'base', 'themeVariables': { 'primaryColor':'#2563eb','primaryTextColor':'#fff','primaryBorderColor':'#1e40af','lineColor':'#64748b','secondaryColor':'#0ea5e9','tertiaryColor':'#64748b','fontSize':'14px'}}}%%
+%%{init: {'theme':'dark', 'themeVariables': { 'primaryColor':'#3b82f6','primaryTextColor':'#f8fafc','primaryBorderColor':'#60a5fa','lineColor':'#94a3b8','secondaryColor':'#06b6d4','tertiaryColor':'#8b5cf6','fontSize':'14px','fontFamily':'ui-sans-serif, system-ui, sans-serif'}}}%%
 graph LR
     subgraph web2["Web2 Activity"]
         commits[GitHub Commits]
@@ -450,9 +448,9 @@ graph LR
     score --> jobs
     score --> grants
     
-    classDef web2Style fill:#f1f5f9,stroke:#94a3b8,color:#1e293b,stroke-width:2px
-    classDef shadowStyle fill:#2563eb,stroke:#1e40af,color:#fff,stroke-width:2px
-    classDef web3Style fill:#0ea5e9,stroke:#0284c7,color:#fff,stroke-width:2px
+    classDef web2Style fill:#334155,stroke:#64748b,color:#f8fafc,stroke-width:2px
+    classDef shadowStyle fill:#3b82f6,stroke:#60a5fa,color:#f8fafc,stroke-width:2px
+    classDef web3Style fill:#06b6d4,stroke:#22d3ee,color:#f8fafc,stroke-width:2px
     
     class commits,prs,issues,stars web2Style
     class mirror,verify,score shadowStyle
