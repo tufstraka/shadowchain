@@ -117,12 +117,17 @@ Open `http://localhost:3000`, connect wallet, authorize platforms, mirror your d
 %%{init: {'theme':'dark', 'themeVariables': { 'done0':'#22c55e','active0':'#06b6d4','crit0':'#ef4444','grid':'#334155','textColor':'#f8fafc','fontSize':'12px'}}}%%
 gantt
     dateFormat YYYY-MM
-    section Now
-    GitHub + Twitter Integration :done, 2025-07, 2025-11
-    IPFS + Encryption           :active, 2025-10, 2026-01
-    section 2026
-    KILT DIDs + XCM             :2026-02, 2026-06
-    LinkedIn, Reddit, Discord   :2026-05, 2026-09
+    section Complete
+    GitHub Integration          :done, 2025-07, 2025-10
+    Twitter/X Integration       :done, 2025-08, 2025-11
+    IPFS Storage                :done, 2025-09, 2025-12
+    Client-side Encryption      :done, 2025-10, 2026-01
+    Web Dashboard               :done, 2025-11, 2026-02
+    section In Progress
+    Performance Optimization    :active, 2026-02, 2026-04
+    section Upcoming
+    KILT DIDs + XCM             :2026-04, 2026-07
+    LinkedIn, Reddit, Discord   :2026-06, 2026-09
     Security Audit              :crit, 2026-08, 2026-10
     Mainnet Launch              :crit, 2026-11, 2026-12
     section 2027
