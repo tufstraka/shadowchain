@@ -1,382 +1,457 @@
 <div align="center">
 
-# 🌀 Shadowchain
+# Shadowchain
 
-## **A Decentralized Reputation Layer for the Open Internet**
+## A Decentralized Reputation Layer for the Open Internet
 
 [![Polkadot SDK](https://img.shields.io/badge/Built%20with-Polkadot%20SDK-E6007A?style=for-the-badge&logo=polkadot)](https://github.com/paritytech/polkadot-sdk)
 [![Substrate](https://img.shields.io/badge/Powered%20by-Substrate-232323?style=for-the-badge)](https://substrate.io)
 [![IPFS](https://img.shields.io/badge/Storage-IPFS-65C2CB?style=for-the-badge&logo=ipfs)](https://ipfs.io)
 
+*Transform your Web2 footprint into verifiable Web3 identity*
 
-
-
-*Shadowchain transforms your Web2 footprint into a verifiable Web3 identity*
-
-[**🚀 Live Demo**](https://shadowchain.locsafe.org) | [**📖 Documentation**](docs/arch.md) | [**🎥 Video Demo**](#) | [**💬 Discord**](#)
+[**Live Demo**](https://shadowchain.locsafe.org) | [**Documentation**](docs/arch.md) | [**Discord**](#)
 
 </div>
 
 ---
 
-## 🌍 **The Vision: Your Digital Shadow, Your Digital Sovereignty**
+## Overview
 
-Shadowchain transforms your digital footprint into a **verifiable, user-owned Web3 identity**. By mirroring your activity into a Polkadot parachain with encrypted IPFS storage, Shadowchain ensures that your online contributions remain **immutable, censorship-resistant, and cryptographically yours**.
+Shadowchain is a decentralized identity and reputation platform built on Polkadot. It enables users to mirror their digital activities from centralized platforms (GitHub, Twitter/X, LinkedIn) into a blockchain-verified, user-controlled archive with encrypted IPFS storage.
 
-> **"Every commit, tweet, and post you make builds your digital legacy. Shadowchain ensures it's truly yours — untouchable, portable, and proof of your impact on the internet."**
-
-Unlike centralized platforms that monetize or censor user data, Shadowchain gives you:
-
-- **Proof of Authenticity**: Blockchain-verified timestamps for every contribution
-- **Proof of Ownership**: Encryption keys only you control
-- **Proof of Reputation**: Verifiable credentials that demonstrate your impact across the internet
-
-Built on Polkadot, Shadowchain connects to multiple ecosystems via XCM, making your professional and social legacy **portable, provable, and interoperable** across the decentralized web.
-
-**Your work shouldn't depend on someone else's server. Shadowchain makes your digital shadow truly yours.**
+Unlike traditional backup solutions, Shadowchain transforms your digital footprint into verifiable credentials that can be used across Web3 ecosystems through cross-chain interoperability.
 
 ---
 
-## ⚡ **Why Now? The Perfect Storm for Web3 Identity**
+## The Problem
 
-### **Platform Volatility is Accelerating**
-- **X (Twitter) API changes** pricing out developers and researchers
-- **GitHub Copilot** training on your code without consent or compensation
-- **Reddit's IPO** monetizing decades of user-generated content
-- **AI companies** scraping your digital footprint for training data
+Centralized platforms control user data, creating several critical issues:
 
-### **Web3 Identity is Reaching Critical Mass**
-- **ENS** surpassing 2M+ registered names
-- **Lens Protocol** building the decentralized social graph
-- **KILT Protocol** issuing verifiable credentials on Polkadot
-- **World ID** proving unique personhood
+**Platform Risk**
+- Account suspensions result in immediate loss of digital history
+- API changes lock out third-party tools and integrations
+- Terms of service changes can monetize user content without consent
 
-### **Demand for Cryptographic Proofs is Exploding**
-- **DAOs** need verifiable contribution history for membership
-- **DeFi protocols** want reputation-based lending without KYC
-- **Employers** seek tamper-proof developer portfolios
-- **Creators** need ownership proofs for their viral content
+**Data Ownership**
+- Users have limited control over their contributions
+- Professional portfolios are siloed across multiple platforms
+- Digital reputation is non-portable between services
 
-**Shadowchain bridges this gap** — it's the user-controlled mirror of the social graph, preserving your Web2 reputation while the world transitions to Web3.
+**Verification Challenges**
+- No cryptographic proof of contribution authorship
+- Easy to fake credentials and professional history
+- Difficult to prove authentic skill levels across platforms
 
 ---
 
-## 💔 **The Problem: Your Digital Life is Held Hostage**
+## The Solution
 
-### **By the Numbers: The Data Ownership Crisis**
+Shadowchain provides a user-sovereign data layer that:
 
-| Platform | Users | Your Data's Fate |
-|----------|-------|------------------|
-| **GitHub** | 100M+ developers | Your code trains AI models without consent |
-| **Twitter/X** | 500M+ users | Your posts vanish with account suspensions |
-| **LinkedIn** | 900M+ professionals | Your network locked behind paywalls |
-| **Combined** | **$3.8T market cap** | Built entirely on YOUR contributions |
+**Preserves Digital History**
+- Blockchain-verified timestamps for all contributions
+- Immutable record of professional and social activity
+- Censorship-resistant archival storage
 
-### **Real Consequences for Real People**
+**Enables Data Portability**
+- Export credentials to any Web3 application
+- Cross-chain reputation queries via XCM
+- W3C-compliant decentralized identifiers (DIDs)
 
-- **🚫 Deplatformed Developer**: *"GitHub suspended my account over a false DMCA claim. 10 years of open source contributions — gone. No appeal, no backup, no recourse."*
-
-- **📵 Shadowbanned Creator**: *"My 50K Twitter followers stopped seeing my posts overnight. My income vanished with my reach. The platform never explained why."*
-
-- **🔒 Locked-Out Professional**: *"LinkedIn restricted my account during a job search. I couldn't prove my work history to potential employers."*
+**Generates Verifiable Credentials**
+- Cryptographic proofs of skill and contribution
+- Reputation scoring based on verified activity
+- Selective disclosure of professional achievements
 
 ---
 
-## ✨ **The Solution: Transform Web2 Actions into Web3 Assets**
+## Core Features
 
-### **🔑 Core Innovation: Your Data Becomes Your Sovereign Property**
+### For Users
 
-Shadowchain doesn't just backup your data — it transforms your digital actions into **verifiable credentials** that can fuel identity, reputation, and opportunity across Web3:
+**Data Sovereignty**
+- User-controlled encryption keys
+- Selective platform authorization
+- Revocable access permissions
 
-| Web2 Action | → | Web3 Asset | Use Cases |
-|-------------|---|------------|-----------|
-| **GitHub Commits** | → | **Proof of Code Contribution** | DAO membership, dev reputation |
-| **Twitter Posts** | → | **Proof of Thought Leadership** | Social tokens, influence scoring |
-| **LinkedIn Connections** | → | **Proof of Professional Network** | Decentralized recruiting |
-| **Reddit Comments** | → | **Proof of Community Engagement** | Governance weight, airdrops |
+**Verifiable Identity**
+- Blockchain-anchored timestamps
+- Cryptographic proof of contributions
+- Portable reputation across ecosystems
 
-### **🏗️ Architecture: Polkadot-Native from Day One**
+**Privacy Controls**
+- Zero-knowledge encryption architecture
+- Local data processing
+- Selective credential disclosure
 
-```mermaid
-graph TB
-    subgraph Web2["Web2 Data Sources"]
-        GH[GitHub API]
-        TW[Twitter/X API]
-        LI[Future: LinkedIn]
-        RD[Future: Reddit]
-    end
-    
-    subgraph Bridge["Shadowchain Bridge Layer"]
-        OAuth[OAuth Service]
-        Fetch[Intelligent Fetcher]
-        Enc[User-Key Encryption]
-    end
-    
-    subgraph Polkadot["Polkadot Ecosystem"]
-        SC[Shadowchain Parachain<br/>Custom Runtime]
-        KILT[KILT Protocol<br/>DIDs & VCs]
-        XCM[XCM v3<br/>Cross-chain Messaging]
-    end
-    
-    subgraph Storage["Decentralized Storage"]
-        IPFS[IPFS Network]
-        Phala[Future: Phala TEE]
-    end
-    
-    subgraph User["User Sovereignty Layer"]
-        Wallet[Polkadot.js]
-        DID[Decentralized Identity]
-        Rep[Reputation NFTs]
-    end
-    
-    GH -->|Authorized Access| OAuth
-    TW -->|Rate-Limited Polling| Fetch
-    Fetch -->|Encrypt Locally| Enc
-    Enc -->|Store Encrypted| IPFS
-    Enc -->|Store Proofs| SC
-    SC <-->|Interoperability| XCM
-    SC <-->|Identity Layer| KILT
-    SC -->|Issue Credentials| DID
-    DID -->|Mint NFTs| Rep
-    Wallet -->|Control Everything| SC
+### For Developers
+
+**Production-Ready Infrastructure**
+- Custom Substrate parachain
+- Optimized FRAME pallets with benchmarked weights
+- XCM v3 integration for cross-chain queries
+
+**Identity Standards**
+- KILT Protocol compatibility for DIDs
+- W3C Verifiable Credentials support
+- Standard credential schemas
+
+**Extensible Architecture**
+- Oracle framework for Web2 data ingestion
+- Plugin system for platform integrations
+- Governance module for community control
+
+---
+
+## Architecture
+
+```
+┌─────────────────────────────────────────────────────────────┐
+│                    Web2 Data Sources                        │
+│         GitHub API  │  Twitter/X  │  LinkedIn (Planned)      │
+└──────────────────┬──────────────────────────────────────────┘
+                   │
+┌──────────────────▼──────────────────────────────────────────┐
+│                 Bridge Layer                                │
+│  OAuth Service │ Data Fetcher │ Local Encryption            │
+└──────────────────┬──────────────────────────────────────────┘
+                   │
+        ┌──────────┴──────────┐
+        │                     │
+┌───────▼─────────┐  ┌────────▼────────┐
+│  IPFS Storage   │  │  Shadowchain    │
+│  (Encrypted)    │  │  Parachain      │
+└─────────────────┘  └────────┬────────┘
+                              │
+                     ┌────────┴────────┐
+                     │                 │
+              ┌──────▼──────┐   ┌─────▼─────┐
+              │ KILT DIDs   │   │ XCM v3    │
+              │ (Planned)   │   │ Bridge    │
+              └─────────────┘   └───────────┘
 ```
 
----
+### Technical Stack
 
-## 🚀 **Key Features: Beyond Backup to Empowerment**
+**Blockchain Layer**
+- Substrate 3.0+ with FRAME v2
+- Custom Shadow pallet for data anchoring
+- Benchmarked extrinsics for production deployment
 
-### **For Users: Own Your Digital Legacy**
+**Storage Layer**
+- IPFS for encrypted content storage
+- XSalsa20-Poly1305 encryption (libsodium)
+- Argon2id key derivation from wallet signatures
 
-| Feature | Traditional Backup | Shadowchain Advantage |
-|---------|-------------------|----------------------|
-| **Data Control** | Platform owns it | YOU own the keys |
-| **Verification** | Trust the platform | Cryptographic proof |
-| **Portability** | Export (maybe) | Native Web3 interop |
-| **Monetization** | Platform profits | YOU profit |
-| **Privacy** | Terms of Service | Zero-knowledge encryption |
-| **Reputation** | Locked in silos | Composable credentials |
-
-### **For Developers: Production-Ready Polkadot Stack**
-
-| Component | Implementation | Polkadot Benefit |
-|-----------|----------------|------------------|
-| **Custom Parachain** | Substrate + FRAME | Shared security from Relay Chain |
-| **Shadow Pallet** | Rust + Benchmarked | Optimized weight calculations |
-| **XCM Integration** | Version 3 | Cross-chain reputation queries |
-| **DID Support** | KILT-compatible | W3C-compliant identities |
-| **Bridge Pallet** | Oracle framework | Trustless Web2 data ingestion |
-| **Governance** | OpenGov ready | Community-driven evolution |
+**Integration Layer**
+- OAuth 2.0 for platform authorization
+- Rate-limited data fetching
+- Event-driven processing pipeline
 
 ---
 
-## 🌐 **Network Effects & Ecosystem Value**
+## Getting Started
 
-### **🏆 Proof of Contribution (PoC) System**
+### Prerequisites
 
-Transform your mirrored actions into verifiable achievements:
+- Node.js 18.x or higher
+- Docker and Docker Compose
+- Polkadot.js browser extension
+- GitHub and/or Twitter account
 
-```rust
-// Example: On-chain reputation scoring
-pub trait ReputationEngine {
-    fn calculate_developer_score(&self, account: AccountId) -> ReputationScore {
-        let github_commits = self.get_verified_commits(account);
-        let code_quality = self.analyze_contribution_impact(github_commits);
-        let consistency = self.calculate_activity_consistency(account);
-        
-        ReputationScore {
-            technical_skill: code_quality * consistency,
-            collaboration: self.get_pr_interactions(account),
-            innovation: self.get_starred_projects(account),
-            verifiable: true,
-            timestamp: <frame_system::Pallet<T>>::block_number(),
-        }
-    }
-}
-```
+### Installation
 
-### **🔗 Cross-Chain Reputation Queries via XCM**
-
-Enable any parachain to verify user reputation:
-
-```rust
-// DeFi lending based on GitHub reputation
-match XcmShadowchain::query_reputation(borrower_account) {
-    Ok(reputation) if reputation.developer_score > 850 => {
-        // Offer undercollateralized loan based on reputation
-        Loans::approve_reputation_based_loan(borrower_account, amount)
-    },
-    _ => Loans::require_standard_collateral(borrower_account)
-}
-```
-
-### **💰 Data Monetization Layer (Optional Opt-in)**
-
-Users can selectively monetize their verified data:
-
-- **AI Training Datasets**: Sell anonymized code patterns to AI companies
-- **Recruitment Pools**: Let companies pay to search your verified skills
-- **Research Data**: Contribute to studies on open-source ecosystems
-- **Retroactive Rewards**: Claim airdrops based on historical contributions
-
----
-
-## 🤝 **Strategic Partnerships & Integrations**
-
-### **Current & Planned Ecosystem Integrations**
-
-| Partner | Integration | Status |
-|---------|-------------|---------|
-| **KILT Protocol** | W3C DIDs & Verifiable Credentials | 🟡 In Development |
-| **Phala Network** | Encrypted compute for private queries | 🔵 Planned |
-| **Litentry** | Aggregated identity scores | 🔵 Planned |
-| **SubSocial** | Decentralized social profiles | 🔵 Planned |
-| **Polkadot Treasury** | Funding for privacy infrastructure | 🟡 Proposal Draft |
-
-### **Web3 Platform Integrations**
-
-- **Gitcoin Passport**: Add Shadowchain verification stamps
-- **Lens Protocol**: Mirror Web2 social graph to Web3
-- **Ceramic Network**: Decentralized data streams
-- **The Graph**: Index shadow data for dApps
-
----
-
-## 📊 **Tokenomics: The $SHDW Token (Future)**
-
-### **Utility & Governance Token Design**
-
-| Use Case | Mechanism | Value Accrual |
-|----------|-----------|---------------|
-| **Storage Staking** | Stake $SHDW for private storage allocation | Reduces circulating supply |
-| **Verification Fees** | Pay in $SHDW for credential issuance | Revenue to treasury |
-| **Reputation Boosts** | Burn $SHDW to highlight achievements | Deflationary pressure |
-| **Governance Voting** | Vote on platform parameters | Decentralized control |
-| **Data Marketplace** | $SHDW as medium of exchange | Transaction volume |
-
-### **Fair Launch Distribution**
-
-- **No VC allocation** — Community-first approach
-- **Retroactive airdrops** — Reward early adopters
-- **Contribution mining** — Earn by mirroring quality data
-- **Treasury reserves** — Sustainable development fund
-
----
-
-## 🛠️ **Quick Start: Own Your Data in 5 Minutes**
-
-### **Prerequisites**
-- Node.js 18+
-- Docker & Docker Compose
-- Polkadot.js Extension
-- GitHub/Twitter account
-
-### **1. Clone & Setup**
 ```bash
+# Clone the repository
 git clone https://github.com/tufstraka/shadowchain.git
 cd shadowchain
+
+# Install dependencies
 make install-deps
+
+# Configure environment
 cp .env.example .env
+# Edit .env with your OAuth credentials
 ```
 
-### **2. Configure OAuth Apps**
-Create OAuth apps for the platforms you want to mirror:
-- **GitHub**: Settings → Developer → OAuth Apps
-- **Twitter**: Developer Portal → Create App
+### OAuth Configuration
 
-### **3. Launch the Stack**
+**GitHub OAuth App**
+1. Navigate to GitHub Settings → Developer Settings → OAuth Apps
+2. Create new OAuth app with callback URL: `http://localhost:3000/auth/github/callback`
+3. Add Client ID and Secret to `.env`
+
+**Twitter OAuth App**
+1. Visit Twitter Developer Portal
+2. Create new app with OAuth 2.0 enabled
+3. Add credentials to `.env`
+
+### Launch Development Environment
+
 ```bash
-make dev  # Starts parachain, IPFS, backend, frontend
+# Start parachain node, IPFS, backend API, and frontend
+make dev
+
+# Access the application
+# Frontend: http://localhost:3000
+# Parachain RPC: ws://localhost:9944
 ```
 
-### **4. Connect & Mirror**
-1. Visit http://localhost:3000
+### First Mirror
+
+1. Open http://localhost:3000 in your browser
 2. Connect Polkadot.js wallet
-3. Authorize platform access
-4. Watch your digital shadow materialize on-chain! 🎉
+3. Authorize platform access (GitHub or Twitter)
+4. Initiate data mirroring
+5. View blockchain-anchored proofs at http://localhost:3000/dashboard
 
 ---
 
-## 🛡️ **Security & Privacy: Zero-Knowledge Architecture**
+## Security and Privacy
 
-### **Military-Grade Encryption Stack**
-- **Algorithm**: XSalsa20-Poly1305 (libsodium)
-- **Key Derivation**: Argon2id with wallet signatures
-- **Storage**: Encrypted blobs on IPFS
-- **Access**: Only your private key can decrypt
+### Encryption Architecture
 
-### **Privacy Guarantees**
-- ✅ **Zero-Knowledge**: Backend never sees plaintext
-- ✅ **Local Encryption**: Data encrypted in your browser
-- ✅ **Revocable Access**: Rotate keys anytime
-- ✅ **Selective Disclosure**: Share only what you choose
+**Client-Side Encryption**
+- All data encrypted in browser before transmission
+- Encryption keys never leave user's device
+- Backend services operate on encrypted blobs only
 
----
+**Key Management**
+- Keys derived from Polkadot wallet signatures
+- Deterministic key generation enables recovery
+- Key rotation supported without data re-encryption
 
-## 📈 **Traction & Roadmap**
+**Storage Security**
+- Encrypted IPFS content addressing
+- No plaintext metadata exposure
+- Tamper-evident blockchain anchoring
 
-### **Current Status (November 2025)**
-- ✅ Parachain running on Paseo testnet
-- ✅ GitHub & X integration live
-- ✅ 1,000+ commits mirrored in pilot program
-- ✅ Sub-second encryption performance
+### Privacy Guarantees
 
-### **Roadmap to Mainnet**
-
-| Phase | Timeline | Milestones |
-|-------|----------|------------|
-| **🏗️ Foundation** | Q4 2025 | Core infrastructure, Paseo deployment |
-| **🔗 Integration** | Q1 2026 | KILT DIDs, XCM v3 |
-| **🚀 Launch** | Q2 2026 | Polkadot parachain, token launch |
-| **🌐 Expansion** | Q3 2026 | LinkedIn, Reddit, Discord support |
-| **🤖 Intelligence** | Q4 2026 | AI-powered reputation scoring |
+- Zero-knowledge architecture: backend cannot decrypt user data
+- Selective disclosure: users control credential sharing
+- Revocable authorization: OAuth tokens can be invalidated
+- Anonymous usage: no personal information required beyond wallet
 
 ---
 
-## 🤲 **Join the Movement**
+## Roadmap
 
-### **For Contributors**
-- 🔧 **Core Development**: Rust, Substrate, TypeScript
-- 🎨 **UI/UX**: Design the future of Web3 identity
-- 📱 **Mobile SDKs**: iOS/Android integration
-- 🌍 **Localization**: Make Shadowchain global
-- 🔒 **Security**: Audit and penetration testing
+### Phase 1: Foundation (Q3 2025 - Q1 2026)
 
-### **For Users**
-- 🧪 **Beta Testing**: Early access program open
-- 📣 **Community**: Join our Discord for updates
-- 🗳️ **Governance**: Shape the platform's future
-- 💡 **Feedback**: Your ideas drive our roadmap
+**Q3 2025**
+- Launch on Paseo testnet
+- GitHub integration (commits, PRs, issues)
+- Twitter/X integration (tweets, engagement)
+
+**Q4 2025**
+- IPFS storage implementation
+- Client-side encryption deployment
+- Web dashboard beta release
+
+**Q1 2026**
+- Performance optimization
+- Security audit completion
+- Community testing program
+
+### Phase 2: Integration (Q2 2026 - Q3 2026)
+
+**Q2 2026**
+- KILT Protocol DID integration
+- W3C Verifiable Credentials support
+- XCM v3 cross-chain queries
+
+**Q3 2026**
+- LinkedIn data integration
+- Reddit integration
+- Discord activity mirroring
+
+### Phase 3: Launch (Q4 2026 - Q1 2027)
+
+**Q4 2026**
+- Polkadot parachain auction participation
+- Mainnet deployment preparation
+- Governance module activation
+
+**Q1 2027**
+- Production launch
+- Mobile application release
+- Ecosystem partnerships
+
+### Phase 4: Expansion (Q2 2027+)
+
+- AI-powered reputation scoring
+- Data marketplace for opt-in monetization
+- Enterprise API for credential verification
+- Multi-signature organizational accounts
 
 ---
 
-## 📞 **Connect With Us**
+## Use Cases
 
-<div align="center">
+### Developer Reputation
+
+**Problem**: GitHub portfolios can be suspended, deleted, or falsified.
+
+**Solution**: Shadowchain provides blockchain-verified proof of code contributions, enabling:
+- DAO membership based on verified development activity
+- Undercollateralized DeFi loans using reputation
+- Authenticated developer portfolios for hiring
+
+### Content Creator Verification
+
+**Problem**: Social media accounts can be shadowbanned, suspended, or impersonated.
+
+**Solution**: Verifiable content history enables:
+- Proof of original content creation
+- Resistance to deplatforming
+- Portable audience metrics across platforms
+
+### Professional Credentials
+
+**Problem**: LinkedIn profiles are locked behind corporate control.
+
+**Solution**: Self-sovereign professional identity supports:
+- Verifiable work history
+- Portable professional networks
+- Censorship-resistant career records
+
+---
+
+## Technology
+
+### Substrate Pallets
+
+**Shadow Pallet**
+- Anchors encrypted IPFS hashes on-chain
+- Tracks data lineage and updates
+- Implements access control logic
+
+**Identity Pallet**
+- Links wallet addresses to DIDs
+- Manages credential schemas
+- Handles verification requests
+
+**Governance Pallet**
+- Community parameter control
+- Upgrade proposal system
+- Treasury management
+
+### XCM Integration
+
+Cross-chain reputation queries enable other parachains to:
+- Verify user credentials without data migration
+- Request specific attestations
+- Implement reputation-based features
+
+Example query from a DeFi parachain:
+
+```rust
+// Query developer reputation from Shadowchain
+let reputation = XcmShadowchain::query_reputation(
+    account_id,
+    CredentialType::DeveloperScore
+)?;
+
+// Adjust loan terms based on verified reputation
+if reputation.score > 750 {
+    LendingPool::offer_reduced_collateral(account_id, amount);
+}
+```
+
+---
+
+## Contributing
+
+Shadowchain is open source and welcomes contributions in:
+
+**Development**
+- Rust/Substrate parachain development
+- TypeScript frontend and backend
+- Mobile application (React Native)
+
+**Design**
+- UI/UX improvements
+- Visual identity
+- Documentation
+
+**Infrastructure**
+- DevOps and deployment
+- Security auditing
+- Performance testing
+
+**Community**
+- Technical documentation
+- Translation and localization
+- Community management
+
+See [CONTRIBUTING.md](CONTRIBUTING.md) for detailed guidelines.
+
+---
+
+## Ecosystem
+
+### Current Integrations
+
+**Data Sources**
+- GitHub (commits, PRs, issues, stars)
+- Twitter/X (tweets, likes, retweets)
+
+**Infrastructure**
+- IPFS for decentralized storage
+- Substrate for blockchain layer
+
+### Planned Integrations
+
+**Identity Providers**
+- KILT Protocol for DIDs
+- Litentry for aggregated identity
+- ENS for domain-based identity
+
+**Data Sources**
+- LinkedIn (professional history)
+- Reddit (community engagement)
+- Discord (server participation)
+
+**Cross-Chain**
+- Phala Network for confidential compute
+- SubSocial for decentralized social
+- Polkadot Asset Hub for tokenization
+
+---
+
+## Community
+
+### Connect
 
 | Platform | Link |
 |----------|------|
-| **🌐 Website** | [shadowchain.locsafe.org](https://shadowchain.locsafe.org) |
-| **💻 GitHub** | [@tufstraka/shadowchain](https://github.com/tufstraka/shadowchain) |
-| **🐦 Twitter** | [@shadowchain](https://twitter.com/shadowchain) |
-| **💬 Discord** | [Join Community](https://discord.gg/shadowchain) |
-| **📧 Email** | shadowchain@locsafe.org |
+| **Website** | [shadowchain.locsafe.org](https://shadowchain.locsafe.org) |
+| **GitHub** | [@tufstraka/shadowchain](https://github.com/tufstraka/shadowchain) |
+| **Twitter** | [@shadowchain](https://twitter.com/shadowchain) |
+| **Discord** | [Join Community](https://discord.gg/shadowchain) |
+| **Email** | shadowchain@locsafe.org |
 
-</div>
+### Support
+
+For technical support, feature requests, or bug reports:
+- Open an issue on [GitHub Issues](https://github.com/tufstraka/shadowchain/issues)
+- Join our [Discord community](https://discord.gg/shadowchain)
+- Email: support@shadowchain.locsafe.org
 
 ---
 
-## 📄 **License**
+## License
 
-Shadowchain is open source under [LICENSE](LICENSE) — because your data freedom should extend to code freedom.
+Shadowchain is released under the MIT License. See [LICENSE](LICENSE) for details.
 
 ---
 
 <div align="center">
 
-## **Your Digital Shadow is Your Digital Wealth**
+**Shadowchain: User-controlled digital identity on Polkadot**
 
-### **🌀 Bridge Your Past. Build Your Future. Own Your Identity.**
-
-**Built with ❤️ on Polkadot**
+Built with Substrate, secured by cryptography, owned by you.
 
 </div>
